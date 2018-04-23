@@ -1,0 +1,51 @@
+{
+  "name": "sscc41",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "wp": "webpack",
+    "pug": "pug -o src src --pretty",
+    "sass": "node-sass -o src src --source-map src",
+    "srv": "browser-sync start --config bs-config.js",
+    "copy": "cpx \"./dist/**/{*.html,*.svg,*.js,*.css,*.jpg,*.png,*.gif,*.csv,*.json,.debug,*.xml}\" \"C:/Program Files (x86)/Common Files/Adobe/CEP/extensions/chitose.net.cjsSupporter\"",
+    "dev": "concurrently \"npm run wp -- -w\" \"npm run pug -- -w\" \"npm run sass -- -w\" \"npm run srv\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^2.5.13",
+    "vue-class-component": "^6.0.0",
+    "vue-property-decorator": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/gsap": "^1.19.2",
+    "@types/jquery": "^3.3.1",
+    "@types/snapsvg": "^0.4.31",
+    "browser-sync": "^2.18.13",
+    "concurrently": "^3.5.0",
+    "cpx": "^1.5.0",
+    "css-loader": "^0.28.9",
+    "file-loader": "^1.1.11",
+    "gsap": "^1.20.4",
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^4.1.1",
+    "opener": "^1.4.3",
+    "pug": "^2.0.0-rc.4",
+    "pug-cli": "^1.0.0-alpha6",
+    "pug-html-loader": "^1.1.5",
+    "pug-loader": "^2.3.0",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^6.0.6",
+    "snapsvg": "^0.5.1",
+    "ts-loader": "^3.5.0",
+    "typescript": "^2.5.3",
+    "vue-html-loader": "^1.2.4",
+    "vue-loader": "^14.1.1",
+    "vue-router": "^3.0.1",
+    "vue-style-loader": "^4.0.2",
+    "vue-template-compiler": "^2.5.2",
+    "webpack": "^3.11.0"
+  }
+}

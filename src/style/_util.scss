@@ -1,0 +1,77 @@
+@import "../../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "vars";
+
+@mixin mq-xl() {
+	@media (min-width: $content_md+1) {
+		@content;
+	}
+}
+
+@mixin mq-md() {
+	@media screen and (min-width: $content_tb+1) and (max-width: $content_md) {
+		@content;
+	}
+}
+
+@mixin mq-tb() {
+	@media screen and (min-width: $content_sp+1) and (max-width: $content_tb) {
+		@content;
+	}
+}
+
+@mixin mq-pc() {
+	@media screen and (min-width: $content_sp+1) {
+		@content;
+	}
+}
+
+@mixin mq-sp() {
+	@media screen and (max-width: $content_sp) {
+		@content;
+	}
+}
+
+@mixin shadow() {
+	box-shadow: 0px 5px 30px 0px rgba($color_black, 0.3);
+}
+
+//@mixin mq($size) {
+//	@if $size==sp {
+//		@media screen and (max-width: $content_sp) {
+//			@content;
+//		}
+//	}
+//	@if $size==tb {
+//		@media screen and (min-width: $content_sp+1) and (max-width: $content_tb) {
+//			@content;
+//		}
+//	}
+//	@if $size==md {
+//		@media screen and (min-width: $content_tb+1) and (max-width: $content_md) {
+//			@content;
+//		}
+//	}
+//	@if $size==xl {
+//		@media (min-width: $content_md+1) {
+//			@content;
+//		}
+//	}
+//	@if $size==pc {
+//		@media screen and (min-width: $content_sp+1) {
+//			@content;
+//		}
+//	}
+//}
+//
+//@mixin mq-above($above) {
+//	@if $above==tb{
+//		@media screen and (min-width: $content_sp+1) {
+//			@content;
+//		}
+//	}
+//	@if $above==md{
+//		@media screen and (min-width: $content_tb+1) {
+//			@content;
+//		}
+//	}
+//}

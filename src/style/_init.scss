@@ -1,0 +1,80 @@
+html, :root {
+	color: $color_white;
+	background-color: $color_black;
+	box-sizing: border-box;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	font-family: "Noto Sans", sans-serif;
+
+	@include mq-pc {
+		font-size: 30px;
+	}
+	@include mq-sp {
+		font-size: 20px;
+	}
+}
+
+body {
+	@include mq-pc {
+		font-size: 18px;
+		line-height: 1.4;
+	}
+	@include mq-sp {
+		font-size: 14px;
+		line-height: 1.4;
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*,
+::before,
+::after {
+	box-sizing: inherit;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+button {
+	background: none;
+	border: 0;
+	cursor: pointer;
+	outline: 0;
+	&:focus {
+		outline: inherit;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	word-wrap: break-word;
+}
+
+// ----- ----- ----- ----- font style
+
+h3 {
+	font-weight: bolder;
+}
+
+h4 {
+	font-weight: bolder;
+}
+
+p {
+}
+
+a {
+	font-weight: bolder;
+}
+
+em {
+	font-weight: bolder;
+}
