@@ -40,6 +40,10 @@ body {
 	font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
 }
 
+//* {
+//	transition: all 0.5s linear;
+//}
+
 .container {
 	//display: flex;
 	//flex-direction: column;
@@ -55,7 +59,6 @@ body {
 	position: relative;
 	display: flex;
 	transform-origin: top left;
-
 }
 
 .btn {
@@ -75,13 +78,16 @@ body {
 		background-color: $color_white;
 		color: $color_black;
 	}
-
 	&.blank {
 		opacity: 0.35;
 	}
 	&.half {
 		height: 1.5rem;
 		font-size: 12px;
+	}
+	&[disabled] {
+		pointer-events: none;
+		opacity: 0.5;
 	}
 }
 
@@ -92,4 +98,28 @@ hr {
 
 .hr-1 {
 	width: 2.5rem;
+}
+
+.controllerModule {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+	.layout-- {
+		&map {
+			display: flex;
+			align-items: flex-end;
+			.half {
+				border-left: 0;
+			}
+		}
+		&left, &right {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+	}
 }

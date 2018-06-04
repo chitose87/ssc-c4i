@@ -40,8 +40,13 @@ html(lang="ja")
     body(data-status="top")
         .container
             #app
-                mission-component(ref="missionComponent")
+                sine-in-component(ref="sineInComponent",v-if="hash === '#sineIn'")
+                home-component(ref="homeComponent",v-if="hash === '#home'")
+                member-component(ref="memberComponent",v-if="hash === '#member'")
+                settings-component(ref="settingsComponent",v-if="hash === '#settings'")
+                mission-component(ref="missionComponent",v-if="hash === '#mission'")
+                log-module
 
-        script(src='./snap.svg-min.js')
+        script(src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js")
         script(src='./build.js')
 

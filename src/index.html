@@ -23,10 +23,15 @@
   <body data-status="top">
     <div class="container">
       <div id="app">
-        <mission-component ref="missionComponent"></mission-component>
+        <sine-in-component ref="sineInComponent" v-if="hash === '#sineIn'"></sine-in-component>
+        <home-component ref="homeComponent" v-if="hash === '#home'"></home-component>
+        <member-component ref="memberComponent" v-if="hash === '#member'"></member-component>
+        <settings-component ref="settingsComponent" v-if="hash === '#settings'"></settings-component>
+        <mission-component ref="missionComponent" v-if="hash === '#mission'"></mission-component>
+        <log-module></log-module>
       </div>
     </div>
-    <script src="./snap.svg-min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
     <script src="./build.js"></script>
   </body>
 </html>
